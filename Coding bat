@@ -33,3 +33,13 @@ def has23(nums):
       continue
   return count
 
+def big_diff(nums):
+  for i in range(len(nums)):
+    for j in range(len(nums)):
+      if nums[i] >= nums[j]:
+        n = nums[i]
+      elif nums[i] <= nums[j]:
+        m = nums[i]
+      n - m = c
+    return c
+
