@@ -56,4 +56,16 @@ def big_diff(nums):
       smallest = num
   return largest - smallest
       
-def
+def sum67(nums):
+  total = 0
+  in_zone = False
+  for i in nums:
+    if i == 6:
+      in_zone = True
+    elif i == 7 and in_zone == True:
+      in_zone = False
+    elif not in_zone:
+      total += i
+  return total  
+    
+
