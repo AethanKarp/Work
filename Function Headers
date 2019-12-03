@@ -1,0 +1,11 @@
+def sum(a, b):
+
+def calc_ceil(num: float) -> int:
+
+def calc_floor(num: float) -> int:
+
+def message(word):
+
+def average(a, b):
+
+def confirm_age(age):
