@@ -68,4 +68,14 @@ def sum67(nums):
       total += i
   return total  
     
+def sum13(nums):
+  a = 0
+  for i in nums:
+    if i == 13:
+      i = 0
+      nums.remove(13)
+    else:
+      a += i
+  return a
+
 
