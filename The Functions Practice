@@ -1,19 +1,34 @@
-def add(a, b):
+add(2, 4) -> 6
+add(9, 9) -> 18
+add(-4, 2) -> -2
+def add(a: int, b: int) -> int:
   return a + b
   
-def format_name(first, last):
+format_name(smith, john) -> john, smith
+format_name(ketchum, ash) -> ash, ketchum
+format_name(vader, darth) -> darth, vader
+def format_name(first: str, last: str) -> str:
   name = last + ", " + first
   return name
   
-def strip_phone_number(pnum):
-  for num in pnum:
+strip_phone_number(12j34n234o129) -> 1234234129
+strip_phone_number(2459329343ie) -> 2459329343
+strip_phone_number(12kbnibi3pojoin456pkn67pno89) -> 1234566789
+def strip_phone_number(phone_number: str) -> str:
+  for num in phone_number:
     if num in 'abcdefghijklmnopqrstuvwxyz':
-      pnum = pnum.replace(num,'')
-  return pnum
-  
-def formant_phone_number(pnum):
-  new_pnum = "(" + pnum[0:3] + ")" + pnum[3:6] + "-" + pnum[6:10]
-  return new_pnum
+      phone_number = phone_number.replace(num,'')
+  return phone_number
 
-def add_from_list(numbers, a, b):
+format_phone_number(1234567890) -> (123)456-7890
+format_phone_number(8764979234) -> (876)497-9234
+format_phone_number(9911112221) -> (991)111-2221
+def formant_phone_number(phone_number: str) -> str:
+  phone_number = "(" + phone_number[0:3] + ")" + phone_number[3:6] + "-" + phone_number[6:10]
+  return phone_number
+
+add_from_list([2,3,1,3,1], 4, 2) -> 2
+add_from_list([6,4,2,4,2,1,2], 5, 6) -> 3
+add_from_list([-1, 4], 0, 1) -> 3
+def add_from_list(numbers: (list[int]), a: int, b:int):
   return numbers[a] + numbers[b]
