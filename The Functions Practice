@@ -1,0 +1,19 @@
+def add(a, b):
+  return a + b
+  
+def format_name(first, last):
+  name = last + ", " + first
+  return name
+  
+def strip_phone_number(pnum):
+  for num in pnum:
+    if num in 'abcdefghijklmnopqrstuvwxyz':
+      pnum = pnum.replace(num,'')
+  return pnum
+  
+def formant_phone_number(pnum):
+  new_pnum = "(" + pnum[0:3] + ")" + pnum[3:6] + "-" + pnum[6:10]
+  return new_pnum
+
+def add_from_list(numbers, a, b):
+  return numbers[a] + numbers[b]
